@@ -42,6 +42,7 @@ class General extends ExportOptions
     public function setTemporaryDirectory(string $directory)
     {
         $this->setTemporaryDirectory = $directory;
+        return $this;
     }
 
     /**
