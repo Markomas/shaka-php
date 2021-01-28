@@ -32,6 +32,29 @@ class General extends ExportOptions
 
     /** @var string */
     private $default_text_language;
+    
+    /** @var string */
+    private $setTemporaryDirectory;
+
+    /**
+     * @param string $directory
+     */
+    public function setTemporaryDirectory(string $directory)
+    {
+        $this->setTemporaryDirectory = $directory;
+    }
+
+    /**
+     * @return array
+     */
+    protected function __getTemporaryDirectory()
+    {
+        if (!$this->setTemporaryDirectory) {
+            return null;
+        }
+
+        return [MediaOptions::TEMPORARY_DIRECTORY, $this->setTemporaryDirectory];
+    }
 
     /**
      * @return array
