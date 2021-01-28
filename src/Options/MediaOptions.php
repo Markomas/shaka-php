@@ -27,6 +27,8 @@ class MediaOptions
     const DEFAULT_LANGUAGE = '--default_language';
 
     const DEFAULT_TEXT_LANGUAGE = '--default_text_language';
+    
+    const TEMPORARY_DIRECTORY = '--temp_dir';
 
 
     //DASH Options
